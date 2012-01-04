@@ -1,7 +1,8 @@
+// A minified version of this file is available at http://api.opencorporates.com/tools/widget.js
 // To use this widget in any HTML file simply add these lines:
-//   <script src="widget.js" type="text/javascript"></script>
+//   <script src="http://api.opencorporates.com/tools/widget.js" type="text/javascript"></script>
 //   <div class="ocwidget-container"></div>
-// The widget should be added to your page wherver you put the <div>
+// The widget will be added to your page wherever you put the <div>
 
 
 (function() {

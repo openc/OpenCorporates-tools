@@ -70,8 +70,8 @@ function setupDocument () {
 
 function insertCompanyData (data, term) {
   var companies = data.companies;
-  content = "<div class='summary'>Found <a href='http://opencorporates.com/companies?q=" + term + "'>" + data.total_count + " results</a></div>"
-  content += listAll(companies)
+  content = "<div class='summary'>Found <a href='http://opencorporates.com/companies?q=" + term + "'>" + data.total_count + " results</a></div>";
+  content += listAll(companies);
   jQuery(".ocwidget-container .loading").hide();
   jQuery( "#ocwidget-result" ).html(content).slideDown("slow");
 }

@@ -59,7 +59,7 @@ function setupDocument () {
     jQuery(".loading").show();
     var $form = jQuery( this ),
             term = $form.find( 'input[name="q"]' ).val(),
-            url = $form.attr( 'action' ).replace('http://','http://api.') + '/search?callback=?';
+            url = $form.attr( 'action' ).replace('http://opencorporates.com/','http://api.opencorporates.com/v0.2/') + '/search?callback=?';
     jQuery.getJSON( url, { q: term },
           function( data ) { insertCompanyData(data, term); }
         );
@@ -69,8 +69,8 @@ function setupDocument () {
     }
 
 function insertCompanyData (data, term) {
-  var companies = data.companies;
-  content = "<div class='summary'>Found <a href='http://opencorporates.com/companies?q=" + term + "'>" + data.total_count + " results</a></div>";
+  var companies = data.results.companies;
+  content = "<div class='summary'>Found <a href='http://opencorporates.com/companies?q=" + term + "'>" + data.results.total_count + " results</a></div>";
   content += listAll(companies);
   jQuery(".ocwidget-container .loading").hide();
   jQuery( "#ocwidget-result" ).html(content).slideDown("slow");
